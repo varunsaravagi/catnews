@@ -34,7 +34,7 @@ for user in iter(users.splitlines()):
 			break
 
 	if since_id_user == 0:
-		statuses = api.user_timeline(count = int(sys.argv[2]), screen_name=user)
+		statuses = api.user_timeline(count = 30, screen_name=user)
 	else:
 		statuses = api.user_timeline(screen_name=user,since_id=since_id_user)
 
